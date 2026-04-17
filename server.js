@@ -12,11 +12,18 @@ const app=exp()
 app.use(exp.json())
 app.use(cookieParser())
 app.use(cors({
-    origin: [
-        "http://localhost:5173",
-        "https://my-blog-frontend-tan.vercel.app"
-    ],
-    credentials: true
+  origin: function(origin, callback) {
+    const allowedOrigins = [
+      "http://localhost:5173",
+      "https://my-blog-frontend-tan.vercel.app"
+    ];
+    if (!origin || allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error("Not allowed by CORS"));
+    }
+  },
+  credentials: true
 }));
 const port=process.env.PORT||5000
 app.use("/common-api",commonapp)

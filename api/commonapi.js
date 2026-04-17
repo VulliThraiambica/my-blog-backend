@@ -52,7 +52,8 @@ commonapp.post("/login",async(req,res) => {
 res.cookie("token", signedtoken, {
   httpOnly: true,
   sameSite: "none",
-  secure: true
+  secure: true,
+  path: "/"
 });
 
 let userobj=user.toObject()
@@ -65,7 +66,8 @@ commonapp.get("/logout",(req,res)=>{
 res.clearCookie("token", {
   httpOnly: true,
   sameSite: "none",
-  secure: true
+  secure: true,
+  path: "/"
 });
 res.status(200).json({message:"logout success"})
 

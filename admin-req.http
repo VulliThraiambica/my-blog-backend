@@ -1,0 +1,27 @@
+
+### admin login
+POST http://localhost:5000/common-api/login
+Content-Type: application/json
+
+{
+  "email": "anu@.com",
+  "password": "12345678"
+}
+
+
+### read all users and authors(email)
+GET http://localhost:5000/admin-api/user
+Cookie:token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5Yjc3MWFmYTYwYWY0NjlhYTUwNTliZiIsImVtYWlsIjoiYWRtaW5AZXhhbXBsZS5jb20iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3NzM2MzAyMzYsImV4cCI6MTc3MzcxNjYzNn0.jYlnr5EVIMRgLot0oiW7GUx1gn5MPaR3fm57mrz5xCM
+
+### read article 
+GET http://localhost:5000/admin-api/article
+Cookie:token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5Yjc3MWFmYTYwYWY0NjlhYTUwNTliZiIsImVtYWlsIjoiYWRtaW5AZXhhbXBsZS5jb20iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3NzM2MzAyMzYsImV4cCI6MTc3MzcxNjYzNn0.jYlnr5EVIMRgLot0oiW7GUx1gn5MPaR3fm57mrz5xCM
+
+
+### blockk or activeate user or author
+PUT http://localhost:5000/admin-api/user/69b6cdea4b127ac8b5e3e5de
+Content-Type: application/json
+Cookie:token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5Yjc3MWFmYTYwYWY0NjlhYTUwNTliZiIsImVtYWlsIjoiYWRtaW5AZXhhbXBsZS5jb20iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3NzM2MzAyMzYsImV4cCI6MTc3MzcxNjYzNn0.jYlnr5EVIMRgLot0oiW7GUx1gn5MPaR3fm57mrz5xCM
+
+{
+    "isuseractive": false}

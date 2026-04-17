@@ -1,0 +1,38 @@
+###
+GET http://localhost:5000/author-api/article
+Cookie:token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5YjZjZGVhNGIxMjdhYzhiNWUzZTVkZSIsImVtYWlsIjoidGhyYWlALmNvbSIsInJvbGUiOiJhdXRob3IiLCJpYXQiOjE3NzM1ODg1NTksImV4cCI6MTc3MzY3NDk1OX0.lZIlzeOviRHyzdsByg4WyPV78NoVMvQGuP7zoH8vv3c
+
+
+
+###
+POST http://localhost:5000/author-api/article
+Content-Type: application/json
+
+{
+"author":"69b6cdea4b127ac8b5e3e5de",
+"title":"be you",
+"category":"novel",
+"content":"own book",
+"comments":[]
+}
+
+###
+PUT http://localhost:5000/author-api/article
+Content-Type: application/json
+Cookie:token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5YjZjZGVhNGIxMjdhYzhiNWUzZTVkZSIsImVtYWlsIjoidGhyYWlALmNvbSIsInJvbGUiOiJhdXRob3IiLCJpYXQiOjE3NzM1ODg1NTksImV4cCI6MTc3MzY3NDk1OX0.lZIlzeOviRHyzdsByg4WyPV78NoVMvQGuP7zoH8vv3c
+
+{ "articleid":"69b6d1e24b127ac8b5e3e5ef",
+"title":"be you edited",
+"category":"novel book",
+"content":"own novel book"
+}
+
+### 
+PATCH http://localhost:5000/author-api/article
+Content-Type: application/json
+Cookie:token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5YjZjZGVhNGIxMjdhYzhiNWUzZTVkZSIsImVtYWlsIjoidGhyYWlALmNvbSIsInJvbGUiOiJhdXRob3IiLCJpYXQiOjE3NzM1ODg1NTksImV4cCI6MTc3MzY3NDk1OX0.lZIlzeOviRHyzdsByg4WyPV78NoVMvQGuP7zoH8vv3c
+
+{
+    "articleid": "69b6cf714b127ac8b5e3e5e9",
+  "isarticleactive": false
+}

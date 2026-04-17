@@ -1,0 +1,46 @@
+### 
+GET http://localhost:5000/user-api/article
+Cookie: token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5YjZkOWUwNGIxMjdhYzhiNWUzZTVmNyIsImVtYWlsIjoiYW51QC5jb20iLCJyb2xlIjoidXNlciIsImlhdCI6MTc3MzU5MTMzNCwiZXhwIjoxNzczNjc3NzM0fQ.CdiIRxxbHYCDtoMQqC_AWWdk8b1LjLpn_f2WjbO2_Yw
+
+###
+POST http://localhost:5000/common-api/users
+Content-Type: application/json
+
+###
+POST http://localhost:5000/common-api/users
+Content-Type: application/json
+
+{
+  "firstname": "user",
+  "lastname": "two",
+  "email": "user2@example.com",
+  "password": "user123",
+  "role": "user"
+}
+
+### user login
+POST http://localhost:5000/common-api/login
+Content-Type: application/json
+
+{
+  "email": "admin@example.com",
+  "password": "admin123"
+}
+
+
+### read article of all author
+GET http://localhost:5000/user-api/article
+Cookie: token=eeyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5YjZkOWUwNGIxMjdhYzhiNWUzZTVmNyIsImVtYWlsIjoiYW51QC5jb20iLCJyb2xlIjoidXNlciIsImlhdCI6MTc3MzYyMzgwNSwiZXhwIjoxNzczNzEwMjA1fQ.nooN3zGlPuSZNEtWgewuv1iLrDNGhIY2BwEAwuczKQ8
+
+
+### add comment by user to an article
+PUT http://localhost:5000/user-api/article
+Content-Type: application/json
+Cookie: token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5YjZkOWUwNGIxMjdhYzhiNWUzZTVmNyIsImVtYWlsIjoiYW51QC5jb20iLCJyb2xlIjoidXNlciIsImlhdCI6MTc3MzYyMzgwNSwiZXhwIjoxNzczNzEwMjA1fQ.nooN3zGlPuSZNEtWgewuv1iLrDNGhIY2BwEAwuczKQ8
+
+{
+  "articleid":"69b6d1e24b127ac8b5e3e5ef",
+"comment":" this is useful article tooo"
+
+}
+

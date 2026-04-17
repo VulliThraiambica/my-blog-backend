@@ -9,6 +9,7 @@ import  cookieParser  from "cookie-parser"
 import cors from "cors"
 config()
 const app=exp()
+app.set("trust proxy", 1);
 app.use(exp.json())
 app.use(cookieParser())
 app.use(cors({

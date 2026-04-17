@@ -49,11 +49,11 @@ commonapp.post("/login",async(req,res) => {
     //create jwt
     const signedtoken =sign({id: user._id, email:email,role:user.role,firstname:user.firstname,lastname:user.lastname,profileImageurl:user.profileImageurl},
         process.env.Secret_key,{expiresIn:"1d"})
-res.cookie("token",signedtoken,{
-    httpOnly:true,
-    sameSite:"lax",
-    secure:false
-})
+res.cookie("token", signedtoken, {
+  httpOnly: true,
+  sameSite: "none",
+  secure: true
+});
 
 let userobj=user.toObject()
 delete userobj.password
@@ -62,10 +62,10 @@ res.status(200).json({message:"login success", payload:userobj})})
 //route for logout 
 commonapp.get("/logout",(req,res)=>{
 
-res.clearCookie("token",{
-httpOnly:true,
-secure:false,
-sameSite:"lax"
+res.clearCookie("token", {
+  httpOnly: true,
+  sameSite: "none",
+  secure: true
 });
 res.status(200).json({message:"logout success"})
 
